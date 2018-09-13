@@ -1,0 +1,28 @@
+#!/usr/bin/env python3
+# -*- coding: utf-8 -*-
+"""
+Created on Wed Sep 12 14:01:36 2018
+
+@author: kdg
+"""
+
+{% extends "base.html" %}
+
+{% block content %}
+    <h1>ЗАДАЙТЕ КООРДИНАТЫ [-1.0 : 1.0]</h1>
+    <form action="" method="post" novalidate>
+        {{ form.hidden_tag() }}
+        <p>
+            {{ form.X.label }}<br>
+            {{ form.X(size=14) }}
+        </p>
+        <p>
+            {{ form.Y.label }}<br>
+            {{ form.Y(size=14) }}
+        </p>
+        <p>{{ form.Z.label }}<br>
+           {{ form.Z(size=14) }}
+        </p>
+        <p>{{ form.submit() }}</p>
+    </form>
+{% endblock %}
